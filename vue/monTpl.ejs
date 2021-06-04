@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./navbar.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('navbar'); %>
+        <div class="content">
+            <div class="tasklist">
+                <div class="tasklisttitle"> A faire</div>
+                <% for(let i in tableau){ 
+                    if(tableau[i].etat == 1){ %>
+                       <%- include('tache',{nom:tableau[i].nom, detail:tableau[i].detail,type:1}) %> 
+                <% } } %>
+            </div>
+            <div class="tasklist">
+                <div class="tasklisttitle"> En cours</div>
+                <% for(let i in tableau){ 
+                    if(tableau[i].etat == 2){ %>
+                       <%- include('tache',{nom:tableau[i].nom, detail:tableau[i].detail,type:2}) %> 
+                <% } } %>
+            </div>
+            <div class="tasklist">
+                <div class="tasklisttitle"> Terminé</div>
+                <% for(let i in tableau){ 
+                    if(tableau[i].etat == 3){ %>
+                       <%- include('tache',{nom:tableau[i].nom, detail:tableau[i].detail,type:3}) %> 
+                <% } } %>
+            </div>
+        </div>
+</body>
+
+</html>

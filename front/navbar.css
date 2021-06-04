@@ -1,0 +1,58 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+header>nav {
+    display: flex;
+}
+header>nav>* {
+    margin:5px;
+    color: white;
+    text-decoration: none;
+}
+
+.content{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around; 
+}
+.tasklisttitle{
+    border: 2px solid black;
+    text-align: center;
+
+}
+.tasklist{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 2px solid black;
+}
+
+.task{
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+    border: 3px solid darkblue;
+}
+
+.taskupper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tasklower{
+    display: flex;
+    justify-content: space-around;
+}
+
+
