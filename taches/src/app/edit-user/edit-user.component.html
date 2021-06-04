@@ -1,0 +1,16 @@
+<div class="edituser">
+    <div class="titreModif">
+        Modification du compte d'utilisateur
+    </div>
+    <form [formGroup]="formMod" (ngSubmit)="validForm()">
+        <div>
+            <label for="modinputNom">Nom d'utilisateur : </label>
+            <input id="modinputNom" formControlName="nom"/>
+        </div>
+        <div>
+            <label for="modinputPass">Mot de passe : </label>
+            <input type="password" id="modinputPass" formControlName="pass"/>
+        </div>
+        <input type="submit" value="Enregistrer les modifications">
+    </form>
+</div>

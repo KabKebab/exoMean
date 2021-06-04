@@ -1,0 +1,19 @@
+<div class="register">
+    <div class="titreRegis">
+        Inscription
+    </div>
+    <form [formGroup]="formReg" (ngSubmit)="validForm()">
+        <div>
+            <label for="reginputNom">Nom d'utilisateur : </label>
+            <input id="reginputNom" formControlName="nom"/>
+        </div>
+        <div>
+            <label for="reginputPass">Mot de passe : </label>
+            <input type="password" id="reginputPass" formControlName="pass"/>
+        </div>
+        <input type="submit" value="Inscription">
+    </form>
+   
+    <div class="detailRegis">Déjà inscrit? <a routerLink="/login">Formulaire de connexion</a></div>
+</div>
+

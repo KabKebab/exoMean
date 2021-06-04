@@ -1,0 +1,21 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+header>nav {
+    display: flex;
+}
+header>nav>* {
+    margin:5px;
+    color: white;
+    text-decoration: none;
+}

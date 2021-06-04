@@ -1,0 +1,100 @@
+
+<div class="btnNewTask" (click)="newTask()">Nouvelle tâche</div>
+<div class="content">
+    <div class="tasklist">
+        <div class="tasklisttitle"> A faire</div>
+        <div *ngFor="let task of taskService.tasks; index as id">
+            <div *ngIf="task.etat==1" class="task">
+                <div *ngIf="task.editing==false; else elseBlock1">
+                    <div class="taskupper">
+                        <h1>{{task.nom}}</h1>
+                        <div class="deleteBtn" (click)="deleteTask(id)">X</div>
+                    </div>
+                    <h3>{{task.detail}}</h3>
+                    <div class="tasklower">
+                    
+                        <button class="EditBtn" (click)="switchEdit(true,id)">Modifier</button>
+                        
+                        <div class="MoveBtn" (click)="changeState(id,2)">></div>
+                        
+                    </div>
+                </div>
+                <ng-template #elseBlock1>
+                        <div class="taskupper">
+                            <input [(ngModel)]="task.nom" name="inputNom"/>
+                        </div>
+                        <textarea [(ngModel)]="task.detail" name="inputDetail"></textarea>
+                        <div class="tasklower">
+                        
+                            <button class="ValidBtn" (click)="switchEdit(false,id)">Modifier</button>
+                            
+                        </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+    <div class="tasklist">
+        <div class="tasklisttitle"> En cours</div>
+        <div *ngFor="let task of taskService.tasks; index as id">
+            <div *ngIf="task.etat==2" class="task">
+                <div *ngIf="task.editing==false; else elseBlock2">
+                    <div class="taskupper">
+                        <h1>{{task.nom}}</h1>
+                        <div class="deleteBtn" (click)="deleteTask(id)">X</div>
+                    </div>
+                    <h3>{{task.detail}}</h3>
+                    <div class="tasklower">
+                        <div class="MoveBtn" (click)="changeState(id,1)"><</div>
+                    
+                        <button class="EditBtn" (click)="switchEdit(true,id)">Modifier</button>
+                        
+                        <div class="MoveBtn" (click)="changeState(id,3)">></div>
+                        
+                    </div>
+                </div>
+                <ng-template #elseBlock2>
+                        <div class="taskupper">
+                            <input [(ngModel)]="task.nom" name="inputNom"/>
+                        </div>
+                        <textarea [(ngModel)]="task.detail" name="inputDetail"></textarea>
+                        <div class="tasklower">
+                        
+                            <button class="ValidBtn" (click)="switchEdit(false,id)">Modifier</button>
+                            
+                        </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+    <div class="tasklist">
+        <div class="tasklisttitle"> Terminé</div>
+        <div *ngFor="let task of taskService.tasks; index as id">
+            <div *ngIf="task.etat==3" class="task">
+                <div *ngIf="task.editing==false; else elseBlock3">
+                    <div class="taskupper">
+                        <h1>{{task.nom}}</h1>
+                        <div class="deleteBtn" (click)="deleteTask(id)">X</div>
+                    </div>
+                    <h3>{{task.detail}}</h3>
+                    <div class="tasklower">
+                        <div class="MoveBtn" (click)="changeState(id,2)"><</div>
+                    
+                        <button class="EditBtn" (click)="switchEdit(true,id)">Modifier</button>
+                        
+                    </div>
+                </div>
+                <ng-template #elseBlock3>
+                        <div class="taskupper">
+                            <input [(ngModel)]="task.nom" name="inputNom"/>
+                        </div>
+                        <textarea [(ngModel)]="task.detail" name="inputDetail"></textarea>
+                        <div class="tasklower">
+                        
+                            <button class="ValidBtn" (click)="switchEdit(false,id)">Modifier</button>
+                            
+                        </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

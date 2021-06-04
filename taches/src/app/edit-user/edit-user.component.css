@@ -1,0 +1,14 @@
+.edituser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: blanchedalmond;
+    border: 2px ridge darkgreen;
+}
+.edituser>*{
+    margin-top:5px;
+
+}

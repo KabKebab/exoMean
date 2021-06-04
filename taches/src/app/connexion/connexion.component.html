@@ -1,0 +1,17 @@
+<div class="connect">
+    <div class="titreConnex">
+        Connexion
+    </div>
+    <form [formGroup]="formConnect" (ngSubmit)="validForm()">
+        <div>
+            <label for="inputNom">Nom : </label>
+            <input id="inputNom" formControlName="nom"/>
+        </div>
+        <div>
+            <label for="inputPass">Mot de passe : </label>
+            <input type="password" id="inputPass" formControlName="pass"/>
+        </div>
+        <input type="submit" value="Connexion">
+    </form>
+    <div class="detailConnex">Pas encore inscrit? <a routerLink="/register">Formulaire d'inscription</a></div>
+</div>

@@ -1,0 +1,64 @@
+.deleteBtn{
+    background-color: crimson; 
+    color: whitesmoke; 
+    border-width: 1px; 
+    padding: 5px;
+}
+
+.btnNewTask{
+    background-color: darkseagreen;
+    color: whitesmoke; 
+    border-width: 1px; 
+    padding: 3px;
+    width: 200px;
+    margin-left: 2%;
+}
+
+.MoveBtn{
+    background-color: lightblue; 
+    color: whitesmoke; 
+    border-width: 1px; 
+    padding: 3px;
+}
+
+.EditBtn{
+    background-color: greenyellow; 
+    color: whitesmoke; 
+    border-width: 1px; 
+    padding: 2px;
+}
+
+.content{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around; 
+}
+.tasklisttitle{
+    border: 2px solid black;
+    text-align: center;
+
+}
+.tasklist{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 2px solid black;
+}
+
+.task{
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+    border: 3px solid darkblue;
+}
+
+.taskupper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tasklower{
+    display: flex;
+    justify-content: space-around;
+}
